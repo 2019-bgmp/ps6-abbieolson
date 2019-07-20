@@ -1,0 +1,27 @@
+Part 3 – Questions
+
+1. Describe how the assembly changes with different k-mer values using the assembly
+statistics you have collected. How does the contig length distribution change?
+
+Good assembly graphs are heavily dependent on k-mer sizes, especially because smaller k-mers produce shorter
+contigs with more connections than longer k-mers. Choosing the best k-mer size depends
+on read length and depth, and it's pretty obvious if you've chosen one that's too big
+or conversely too small. A graph comprised of smaller sub-graphs probably has disparate
+contigs with no connections to others, and the k-mer might be too big (i.e. all three
+k-mer sizes at a coverage cut-off of 60), and the opposite can happen if the k-mer
+is too small.
+
+2. How does an increased coverage cutoff affect the assembly? What is happening to the
+de Bruijin graph when you change the value of this parameter? How does velvet
+calculate its value for ‘auto’?
+
+Like I mentioned above, a large cut-off leads to sub-graph clumps. The cut-off of 20 must
+have been ideal for all three k-mer sizes because the "auto" graph for k-mer sizes
+is identical to the cut-off of 20 for all three graphs. The "auto" coverage cut-off
+is set by Velvet to half the length weighted median contig coverage depth, and the
+de Bruijin graph will skew further to the left.
+
+3. How does increasing minimum contig length affect your contig length distribution and
+N50?
+
+Increasing the minimum contig length decreases the total number of contigs, which lowers the N50.

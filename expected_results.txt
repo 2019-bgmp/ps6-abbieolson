@@ -1,0 +1,30 @@
+# EXPECTED RESULTS FROM UNIT TEST FILE
+
+>NODE_1_length_50_cov_536.720947
+CTCCCGGCTGGAACTCCCGTAGCTGAGCTCTACGGTTATAGATTCTGGCTTGGGCGTGTTCTCCCGGCTGGAACTCCCGTAGCTGAGCTCTACGGTTATA
+
+# 50 characters
+
+>NODE_2_length_30_cov_536.720947
+CTCCCGGCTGGAACTCCCGTAGCTGAGCTCTACGGTTATACTCCCGGCTGGAACTCCCGTAGCTGAGCTCTACGGTTATA
+
+# 30 characters
+
+>NODE_2_length_10_cov_81.681267
+ATTCAAACGTGAAACGAATACTCCCGGCTGGAACTCCCGTAGCTGAGCTCTACGGTTATA
+
+# 10 characters
+
+
+K-mer length (K) = 49
+
+max_contig = 100 - 49 + 1 = 50
+# longest contig of the 3 contigs
+mean_contig = 90 / 3 = 30
+# sum of the 3 contigs / 3
+mean_cov_depth = (536.720947 + 536.720947 + 81.681267) / 3 = 385.041054
+# sum of the coverages / 3
+total_phys = 100 + 80 + 60 = 240
+# sum of the lengths of the nts
+num_contigs = 3
+# the number of FASTA entries
